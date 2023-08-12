@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>계산기</title>
+        <link rel="stylesheet" href="calculator.css">
+        <!-- <script defer src="calculator.js"></script> -->
+    </head>
+
+    <body>
+     <center>    
+        <h1>Calculator</h1>
+
+        <input type="text" id ="display">
+        <br>
+        <input type="text" id="result">
+        <br>
+        
+        <button onclick="add(1)">1</button>
+        <button onclick="add(2)">2</button>
+        <button onclick="add(3)">3</button>
+        <button onclick="reset()" class="C">C</button>
+        <br>
+        <button onclick="add(4)">4</button>
+        <button onclick="add(5)">5</button>
+        <button onclick="add(6)">6</button>       
+        <button class="elementaryArithmetic" onclick="add('+')">+</button>
+        <br>        
+        <button onclick="add(7)">7</button>
+        <button onclick="add(8)">8</button>
+        <button onclick="add(9)">9</button>
+        <button class="elementaryArithmetic" onclick="add('-')">-</button>
+        <br>
+        <button onclick="add(0)">0</button>
+        <button class="elementaryArithmetic" onclick="add('*')">*</button>
+        <button class="elementaryArithmetic" onclick="add('/')">/</button>
+        <button onclick="calculate()" class="C" >=</button>
+     </center>
+
+     <script>
+        function add(char) {
+            var display = document.getElementById('display'); // 우리가 식을 입력할 input 태그를 불러옵니다.
+            // display.value는 input 태그 안에 들어 있는 값을 의미합니다.
+            display.value = display.value + char;
+            // display.value += char; 로 쓸 수도 있습니다.
+            // input 태그의 값 뒤에 char 문자를 추가해 주는 역할을 합니다.
+        }
+        function calculate() {
+            var display = document.getElementById('display');
+            var result = eval(display.value); // 식을 계산하고 result 변수에 저장합니다.
+            document.getElementById('result').value = result;
+        }
+        function reset() {
+            document.getElementById('display').value = "";
+            document.getElementById('result').value = "";
+        }
+    </script>
+        
+    </body>
+    </html>
+    
