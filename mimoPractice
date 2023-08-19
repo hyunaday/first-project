@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h4>Sign up</h4>
+    <input type="text" placeholder = "Email">
+    <br>
+    <input type="password"  placeholder = "Password">
+    <button>Submit</button>
+    <br>
+    <br>
+    <p>Range:</p>
+    <input type="range">
+    <p>Checkbox:</p>
+    <input type="checkbox">
+    <p>Date:</p>
+    <input type="date">
+    <p>Color:</p>
+    <input type="color">
+    <h4>Create an Account</h4>
+    <input placeholder = "username">
+    <p>What's your name?</p>
+    <input placeholder="First name">
+    <input placeholder="Last  name">
+</body>
+</html>
